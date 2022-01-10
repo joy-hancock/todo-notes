@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Rock+Salt&display=swap');
+
+* {
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+input,
+textarea {
+	outline: none;
+	resize: none;
+}
+
+.notes-list {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 10px;
+	margin: 0;
+}
+
+.app-header__title {
+	margin: 10px 20px 0px;
+	font-family: 'Rock Salt', cursive;
+	color: darkmagenta;
+	font-size: 50px;
+}
+
+.app-header__controls {
+	display: flex;
+	align-items: center;
+	margin: 10px 0 0 10px;
+}
+
+.search,
+.add-new {
+	font-size: 14px;
+	padding: 5px;
+	margin: 8px;
+}
+
+.search {
+	flex-grow: 1;
+	max-width: 300px;
+}
+
+.add-new {
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 8px;
+	margin-left: 15px;
+	font-weight: bolder;
+	background-color: #eee;
+	border-color: darkmagenta;
+	color: darkmagenta;
+}
+
+.note {
+	font-family: 'Rock Salt', cursive;
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	border-radius: 5px;
+	display: flex;
+	flex-flow: row wrap;
+	border: 1px solid darkmagenta;
+	box-shadow: 2px 2px 3px lightpink;
+	background-color: lightpink;
+	align-content: flex-start;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.note:hover {
+	background-color: lightgoldenrodyellow;
+}
+
+.note__title {
+	width: 70%;
+	height: 30px;
+	font-family: 'Rock Salt', cursive;
+	font-size: 20px;
+	font-weight: bolder;
+	background: none;
+	padding: 2px 0 0px 14px;
+	border: none;
+}
+
+.note__delete {
+	width: 10%;
+	font-size: 20px;
+	color: magenta;
+}
+
+.note__description {
+	width: 100%;
+	font-family: 'Rock Salt', cursive;
+	padding: 8px 14px;
+	background: transparent;
+	flex-grow: 1;
+	font-size: 14px;
+	border: none;
+	border-top: solid 1px grey;
+	font-weight: bold;
+}
+
+.note__delete:hover {
+	color: mediumvioletred;
+	cursor: pointer;
 }
